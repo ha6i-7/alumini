@@ -1,4 +1,4 @@
-/*const x = 10;
+const x = 10;
 if (x==10){
     console.log('x is 10');
 } 
@@ -158,7 +158,7 @@ items.forEach((item) => console.log(item));
         document.querySelector('#my-form').style.background = '#ccc';
         document.querySelector('body').classList.add('bg-dark');
         document.querySelector('.items').lastElementChild.innerHTML = '<h1>Hello</h1>';
-    })*/
+    })
    const myForm = document.querySelector('#my-form');
    const nameInpust = document.querySelector('#name');
    const emailInput = document.querySelector('#email');
@@ -177,7 +177,12 @@ items.forEach((item) => console.log(item));
         //alert('please enter fields');
     }else{
         const li = document.createElement(li);
-        li.appendChild();
+        li.appendChild(document.createTextNode(`${nameInput.value} : $ {emailInput.value}`));
+        userList.appendChild(li);
+        //clear fileds
+        nameInput.value='';
+        emailInput.value = '';
+
     }
     }
-   }
+   
